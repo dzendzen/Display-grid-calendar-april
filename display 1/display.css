@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+.container {
+  display: grid;
+  grid-template: repeat(10, 1fr) / (8, 1fr);
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "h h h h h h h h"
+    "h h h h h h h h"
+    "s s s1 s1 s2 s2 s3 s3"
+    "s s s1 s1 s2 s2 s3 s3"
+    "s s m m m m m a"
+    "s s m m m m m a"
+    "s s m m m m m a"
+    "s s m m m m m a"
+    "s s m m m m m a"
+    "f f f f f f f f";
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+header {
+  grid-area: h;
+  background-color: darkslategrey;
+}
+nav {
+  grid-area: s;
+  background-color: black;
+  color: lightgrey;
+}
+.one {
+  grid-area: s1;
+  background-color: lightskyblue;
+}
+.two {
+  grid-area: s2;
+  background-color: black;
+  color: lightgrey;
+}
+.three {
+  grid-area: s3;
+  background-color: lightskyblue;
+}
+main {
+  grid-area: m;
+  background-color: lightgrey;
+}
+aside {
+  grid-area: a;
+  background-color: black;
+  color: lightgrey;
+}
+footer {
+  grid-area: f;
+  background-color: darkslategrey;
+}
